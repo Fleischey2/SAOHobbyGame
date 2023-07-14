@@ -18,6 +18,8 @@ Thats it basically. Im just doing it because i have fun to experiment with Unity
     
     - Stuff to put on the terrain like structures, camps spots where special loot drops, npcs are and flowers and stuff spawn you get the drill
 
+    - Models are important too, if u have fun modeling stuff in your free time, absolutely do that 
+
 Everything is obviously not the highest standard and its more like a hobby project.
 
 Discord: https://discord.gg/Yc4YrSzu

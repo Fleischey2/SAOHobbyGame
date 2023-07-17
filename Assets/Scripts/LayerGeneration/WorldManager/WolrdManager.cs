@@ -71,7 +71,7 @@ namespace terrain {
                 for(int z1 = 0; z1 < worldHeight; z1++) {
                     
                     GameObject cont = new GameObject("Chunk");
-                    //cont.layer = LayerMask.NameToLayer("whatIstGround");
+                    cont.layer = LayerMask.NameToLayer("whatIsGround");
                     cont.transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
                     cont.transform.parent = transform;
                     container = cont.AddComponent<Container>();

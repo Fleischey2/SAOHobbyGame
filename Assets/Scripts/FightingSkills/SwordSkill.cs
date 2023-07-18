@@ -15,6 +15,8 @@ public class SwordSkill : MonoBehaviour
     float timer = 0;
     bool isMouseDown;
 
+
+    CharacterController controller;
     public GameObject weapon;
     Animator weaponSkill;
     Animator playerAnimator;
@@ -23,7 +25,6 @@ public class SwordSkill : MonoBehaviour
     public Texture2D secondTexture;
 
     public bool control;
-    bool lol = false;
 
     public RectTransform canvasRectTransform;
 
@@ -35,6 +36,8 @@ public class SwordSkill : MonoBehaviour
     private void Start()
     {
 
+        UnityEngine.Debug.Log("in Sword skills " + transform.position);
+        controller = gameObject.GetComponent<CharacterController>();
         playerAnimator = gameObject.GetComponent<Animator>();
         weaponSkill = weapon.GetComponent<Animator>();
         // Erstelle das Canvas
@@ -61,7 +64,7 @@ public class SwordSkill : MonoBehaviour
         
         if (Input.GetMouseButtonDown(0)) // linke Maustaste gedrückt
         {
-
+            UnityEngine.Debug.Log("in Sword skills " + transform.position);
             weaponSkill.SetTrigger("castAttack");
             isMouseDown = true;
             timer = Time.time;
@@ -97,7 +100,7 @@ public class SwordSkill : MonoBehaviour
             UnityEngine.Debug.Log("Fertig aufgeladen");
         }
 
-        transform.position = transform.position + new Vector3(0f, 0f, animationControl.transform.position.z);
+        
 
         if (painting)
         {
@@ -201,7 +204,7 @@ public class SwordSkill : MonoBehaviour
 
     private void Test() {
 
-        
+        controller.Move(animationControl.transform.localPosition);
 
     }
 

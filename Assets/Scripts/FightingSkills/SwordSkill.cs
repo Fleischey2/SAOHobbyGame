@@ -204,7 +204,8 @@ public class SwordSkill : MonoBehaviour
 
     private void Test() {
 
-        controller.Move(animationControl.transform.localPosition);
+        Vector3 moving = animationControl.transform.position - transform.position;
+        controller.Move(moving);
 
     }
 
